@@ -1,0 +1,51 @@
+{
+  "education": [
+    {
+      "institution": "Kalimantan Institute of Technology",
+      "description": "With the education provided by this institution, I have gained a solid foundation in computer science. This experience not only broadened my knowledge, but also equipped me with deep skills in database and application development, for both desktop and web platforms.",
+      "skills": [
+        {
+          "name": "Python",
+          "url": "https://www.python.org/",
+          "image": "src/assets/images/Python.png"
+        },
+        {
+          "name": "Java",
+          "url": "https://www.java.com/",
+          "image": "src/assets/images/Java.png"
+        },
+        {
+          "name": "MySQL",
+          "url": "https://www.mysql.com/",
+          "image": "src/assets/images/MySQl.png"
+        }
+      ]
+    },
+    {
+      "institution": "Binar Academy",
+      "description": "Through my enrollment in the Fullstack Web Developer program at Binar Academy, I delved deep into the realm of web development. The comprehensive curriculum equipped me with proficiency in JavaScript, PostgreSQL, React, and Node.js, empowering me to excel in various facets of web development.",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "url": "https://www.python.org/",
+          "image": "src/assets/images/JavaScript.png"
+        },
+        {
+          "name": "PostgreSQL",
+          "url": "https://www.python.org/",
+          "image": "src/assets/images/Postgre.png"
+        },
+        {
+          "name": "Node.js",
+          "url": "https://www.python.org/",
+          "image": "src/assets/images/nodejs.png"
+        },
+        {
+          "name": "React",
+          "url": "https://www.python.org/",
+          "image": "src/assets/images/React.png"
+        }
+      ]
+    }
+  ]
+}
