@@ -105,13 +105,11 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useDarkMode } from '../composables/useDarkMode'
-import Line1 from '../../public/images/Line.png'
-import Line2 from '../../public/images/Line2.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const { isDarkMode } = useDarkMode()
-const line = computed(() => (isDarkMode.value ? Line1 : Line2))
+const line = computed(() => (isDarkMode.value ? '/images/Line.png' : '/images/Line2.png'))
 
 const skill = ref([])
 const activeTab = ref('techStack')
@@ -126,7 +124,7 @@ const showTools = () => {
 
 const fetchEducationData = async () => {
   try {
-    const response = await fetch('../../public/data/skills.json')
+    const response = await fetch('/data/skills.json')
     const data = await response.json()
     skill.value = data.skills
   } catch (error) {

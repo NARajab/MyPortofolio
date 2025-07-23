@@ -12,11 +12,7 @@
       </p>
     </div>
     <div class="flex justify-center">
-      <img
-        class="w-1/2 rounded-full md:w-full"
-        src="../../public/images/Ellipse 1.png"
-        alt="my-foto"
-      />
+      <img class="w-1/2 rounded-full md:w-full" src="/images/Ellipse 1.png" alt="my-foto" />
     </div>
   </div>
 </template>

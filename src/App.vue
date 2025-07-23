@@ -73,7 +73,7 @@ onUnmounted(() => {
 
 <style scoped>
 #app {
-  background-image: url('../../public/images/background.avif');
+  background-image: url('/images/background.avif');
   display: flex;
   flex-direction: column;
   align-items: center;

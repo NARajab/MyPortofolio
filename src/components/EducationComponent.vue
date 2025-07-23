@@ -42,19 +42,17 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useDarkMode } from '../composables/useDarkMode'
-import Line1 from '../../public/images/Line.png'
-import Line2 from '../../public/images/Line2.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const { isDarkMode } = useDarkMode()
-const line = computed(() => (isDarkMode.value ? Line1 : Line2))
+const line = computed(() => (isDarkMode.value ? '/images/Line.png' : '/images/Line2.png'))
 
 const education = ref([])
 
 const fetchEducationData = async () => {
   try {
-    const response = await fetch('../../public/data/education.json')
+    const response = await fetch('/data/education.json')
     const data = await response.json()
     education.value = data.education
   } catch (error) {
