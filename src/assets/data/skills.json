@@ -40,9 +40,9 @@
           "image": "src/assets/images/Python.png"
         },
         {
-          "name": "PHP",
-          "url": "https://www.php.net/",
-          "image": "src/assets/images/PHP.png"
+          "name": "Flutter",
+          "url": "https://flutter.dev/",
+          "image": "src/assets/images/flutter.png"
         },
         {
           "name": "Laravel",

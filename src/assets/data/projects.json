@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Backend Web Kekeyaan Intelektual ITK",
+    "image": "src/assets/images/1.png",
+    "githubLink": "https://github.com/NARajab/BE-KI-ITK",
+    "type": "Backend",
+    "language": "Node.js, Express.js, PostgreSQL"
+  },
+  {
+    "title": "Ascent Aplication MOOC",
+    "image": "src/assets/images/2.png",
+    "githubLink": "https://github.com/NARajab/Finall-Project-Frontend-IPPL.git",
+    "type": "Fullstack",
+    "language": "Node.js, Express.js, React.js, PostgreSQL"
+  },
+  {
+    "title": "Backend Web Administrations RT-44",
+    "image": "src/assets/images/4.png",
+    "githubLink": "https://github.com/NARajab/BE-RT44.git",
+    "type": "Backend",
+    "language": "Node.js, Express.js, PostgreSQL"
+  },
+  {
+    "title": "Bima Nusa App",
+    "image": "src/assets/images/3.png",
+    "githubLink": "https://github.com/NARajab/FE_Mobile_Inspection_Vehicle_BIMA_ENVIRO.git",
+    "type": "Mobile App",
+    "language": "Flutter, Firebase"
+  }
+]

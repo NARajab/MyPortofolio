@@ -1,7 +1,7 @@
 <template>
   <div
     id="education"
-    class="items-center justify-center w-4/5 py-32 md:w-1/2 mt-36 font-poppins"
+    class="items-center justify-center w-4/5 py-14 md:py-32 md:w-1/2 mt-36 font-poppins"
     data-aos="fade-left"
     data-aos-duration="1500"
   >
@@ -27,7 +27,7 @@
           <div
             v-for="(skill, skillIndex) in item.skills"
             :key="skillIndex"
-            class="flex items-center px-2 border rounded-md border-[#7f7f7f] h-14"
+            class="flex items-center px-2 border rounded-md hover:bg-[#7f7f7f64] border-[#7f7f7f] h-14 transform transition-transform duration-300 hover:-translate-y-1"
           >
             <a class="flex items-center" target="_blank" :href="skill.url">
               <img :src="skill.image" class="w-10 pr-1" alt="" />

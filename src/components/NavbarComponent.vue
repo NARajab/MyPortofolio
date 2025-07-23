@@ -4,17 +4,21 @@
     :class="{ 'navbar-scrolled': isScrolled, 'md:mobile-nav': isMobileNavOpen }"
   >
     <div class="flex">
-      <h1 class="pt-1 text-2xl font-amita">AliRajabPorto;</h1>
+      <a href="#" class="pt-1 text-2xl font-amita">AliRajabPorto;</a>
     </div>
     <div class="flex mobile-nav">
-      <ul v-show="!isMobileNavOpen" class="items-center text-xl md:flex gap-9 font-poppins">
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul v-show="isMobileNavOpen" class="items-center text-xl md:flex gap-9 font-poppins">
+        <li><a href="#education" @click="isMobileNavOpen.valueOf = false">Education</a></li>
+        <li><a href="#skills" @click="isMobileNavOpen.valueOf = false">Skills</a></li>
+        <li><a href="#projects" @click="isMobileNavOpen.valueOf = false">Project</a></li>
         <li class="pl-10">
           <a :href="githubUrl" target="_blank">
-            <img :src="githubImg" alt="GitHub" />
+            <Github
+              :size="38"
+              :stroke-width="2.2"
+              class="transition-all duration-300 transform hover:scale-110 hover:rotate-6"
+              :class="isDarkMode ? 'text-white' : 'text-black'"
+            />
           </a>
         </li>
       </ul>
@@ -37,14 +41,18 @@
       </button>
     </div>
     <div class="hidden md:flex">
-      <ul class="items-center text-xl md:flex gap-9 font-anta">
+      <ul class="items-center pt-2 text-xl md:flex gap-9 font-anta">
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="pl-10">
+        <li><a href="#projects">Project</a></li>
+        <li class="pr-4">
           <a :href="githubUrl" target="_blank">
-            <img :src="githubImg" alt="GitHub" />
+            <Github
+              :size="38"
+              :stroke-width="2.2"
+              class="transition-all duration-300 transform hover:scale-110 hover:rotate-6"
+              :class="isDarkMode ? 'text-white' : 'text-black'"
+            />
           </a>
         </li>
       </ul>
@@ -69,17 +77,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { provide, ref, onMounted, onUnmounted } from 'vue'
 import { useDarkMode } from '../composables/useDarkMode'
-import GithubLight from '../assets/images/Github.png'
-import GithubDark from '../assets/images/Github-dark.png'
+import { Github } from 'lucide-vue-next'
 
 const isScrolled = ref(false)
-const isMobileNavOpen = ref(true)
+const isMobileNavOpen = ref(false)
+provide('isMobileNavOpen', isMobileNavOpen)
 const { isDarkMode } = useDarkMode()
 
 const githubUrl = 'https://github.com/NARajab'
-const githubImg = computed(() => (isDarkMode.value ? GithubLight : GithubDark))
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0

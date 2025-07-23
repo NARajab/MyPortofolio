@@ -4,30 +4,53 @@
     <Identity />
     <Education />
     <Skills />
-    <button @click="toggleDarkMode()" class="z-20 toggle-dark-mode">
-      <img :src="isDarkMode ? Sun : Moon" alt="Dark Mode Toggle" />
+    <Project />
+    <Contact />
+    <button v-if="showDarkModeButton" @click="toggleDarkMode()" class="z-50 toggle-dark-mode">
+      <Sun v-if="isDarkMode" class="menu-button light-mode" :size="40" />
+      <Moon v-else class="menu-button dark-mode" :size="40" />
     </button>
     <button
+      id="buntton"
       v-if="isVisible"
       @click="scrollToTop"
       :class="['scroll-to-top', { 'light-mode': !isDarkMode, 'dark-mode': isDarkMode }]"
     >
-      ↑
+      <ChevronUp />
     </button>
   </main>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useDarkMode } from './composables/useDarkMode'
 import Navbar from './components/NavbarComponent.vue'
+import { ref, onMounted, computed, onUnmounted, inject } from 'vue'
+import { useDarkMode } from './composables/useDarkMode'
 import Identity from './components/IdentityComponent.vue'
 import Education from './components/EducationComponent.vue'
 import Skills from './components/SkillsComponent.vue'
-import Sun from './assets/images/icons/sun.svg'
-import Moon from './assets/images/icons/moon.svg'
+import Project from './components/ProjectComponent.vue'
+import Contact from './components/ContactComponent.vue'
+import { Moon, Sun, ChevronUp } from 'lucide-vue-next'
 
 const { isDarkMode, toggleDarkMode, containerClass } = useDarkMode()
+
+const isMobileNavOpen = inject('isMobileNavOpen', ref(false))
+
+const isMobile = ref(false)
+
+onMounted(() => {
+  const checkMobile = () => {
+    isMobile.value = window.innerWidth <= 768
+  }
+  checkMobile()
+  window.addEventListener('resize', checkMobile)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkMobile)
+})
+
+const showDarkModeButton = computed(() => !(isMobile.value && isMobileNavOpen.value))
 
 const isVisible = ref(false)
 
@@ -36,7 +59,7 @@ const scrollToTop = () => {
 }
 
 const handleScroll = () => {
-  isVisible.value = window.scrollY > 100 // Tampilkan tombol jika scrollY lebih dari 100px
+  isVisible.value = window.scrollY > 100
 }
 
 onMounted(() => {
@@ -71,8 +94,15 @@ html {
   color: #ffffff;
 }
 .container-light-theme {
-  background-color: #fff;
+  background-color: #e9e9e9;
   color: #000000;
+}
+
+button svg {
+  transition: transform 0.3s ease;
+}
+button:hover svg {
+  transform: rotate(20deg);
 }
 
 .toggle-dark-mode {
@@ -99,15 +129,22 @@ html {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 22px;
+  padding: 16px;
   color: #fff;
-  border: solid 3px #585858;
+  border: solid 1px #585858;
   border-radius: 50%;
   cursor: pointer;
   font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.scroll-to-top svg {
+  transition: transform 0.3s ease;
+}
+.scroll-to-top:hover svg {
+  transform: translateY(-4px);
 }
 
 .scroll-to-top:hover {
@@ -122,6 +159,6 @@ html {
 
 .scroll-to-top.dark-mode {
   color: #fff;
-  border-color: #585858;
+  border-color: #fff;
 }
 </style>

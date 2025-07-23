@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Email",
+    "value": "nuralirajab03@gmail.com",
+    "icon": "Mail",
+    "link": "https://mail.google.com/mail/?view=cm&fs=1&to=nuralirajab03@gmail.com"
+  },
+  {
+    "type": "WhatsApp",
+    "value": "+62 852-4691-8508",
+    "icon": "Phone",
+    "link": "https://wa.me/6285246918508"
+  },
+  {
+    "type": "LinkedIn",
+    "value": "linkedin.com/in/nur-ali-rajab-338b38286",
+    "icon": "Linkedin",
+    "link": "https://linkedin.com/in/nur-ali-rajab-338b38286"
+  },
+  {
+    "type": "Instagram",
+    "value": "github.com/NARajab",
+    "icon": "Instagram",
+    "link": "https://www.instagram.com/_alirajab3/"
+  }
+]

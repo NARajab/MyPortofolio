@@ -1,14 +1,15 @@
 <template>
   <div
     id="skills"
-    class="items-center justify-center w-1/2 py-32 font-poppins"
+    class="items-center justify-center w-4/5 py-14 md:py-32 md:w-1/2 font-poppins"
     data-aos="fade-left"
     data-aos-duration="1500"
   >
-    <div class="flex items-center">
+    <div class="items-center hidden md:flex">
       <img :src="line" class="w-1/6 pt-1 pr-4 rounded-full" alt="" />
       <h1 class="text-xl font-bold text-left font-poppins">Skills</h1>
     </div>
+    <h1 class="text-xl font-bold text-left md:hidden font-poppins">Skills</h1>
     <div class="mt-4">
       <button
         @click="showTechStack"
@@ -33,17 +34,19 @@
       </button>
     </div>
 
-    <h1 v-if="activeTab === 'techStack'" class="mt-4">Use Regulary</h1>
+    <h1 v-if="activeTab === 'techStack'" class="mt-4" data-aos="fade-left" data-aos-duration="1500">
+      Use Regulary
+    </h1>
     <div
       v-if="activeTab === 'techStack'"
-      class="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-2 md:grid-cols-3"
+      class="grid grid-cols-2 gap-4 mt-2 md:grid-cols-3"
+      data-aos="fade-right"
+      data-aos-duration="1500"
     >
       <div
         v-for="(item, index) in skill.techStack?.useRegularly"
         :key="index"
-        class="flex items-center px-2 border rounded-md border-[#7f7f7f] h-14"
-        data-aos="fade-right"
-        data-aos-duration="1500"
+        class="flex items-center px-2 border rounded-md border-[#7f7f7f] h-14 hover:bg-[#7f7f7f64] transform transition-transform duration-300 hover:-translate-y-1"
       >
         <a class="flex items-center" target="_blank" :href="item.url">
           <img :src="item.image" class="w-10 pr-1" alt="" />
@@ -51,17 +54,24 @@
         </a>
       </div>
     </div>
-    <h1 v-if="activeTab === 'techStack'" class="mt-4">Had Contact With</h1>
+    <h1
+      v-if="activeTab === 'techStack'"
+      class="mt-4"
+      data-aos="fade-right"
+      data-aos-duration="1500"
+    >
+      Had Contact With
+    </h1>
     <div
       v-if="activeTab === 'techStack'"
-      class="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-2 md:grid-cols-3"
+      class="grid grid-cols-2 gap-4 mt-2 md:grid-cols-3"
       data-aos="fade-left"
       data-aos-duration="1500"
     >
       <div
         v-for="(item2, index) in skill.techStack?.hadContact"
         :key="index"
-        class="flex items-center px-2 border rounded-md border-[#7f7f7f] h-14"
+        class="flex items-center hover:bg-[#7f7f7f64] px-2 border rounded-md border-[#7f7f7f] h-14 transform transition-transform duration-300 hover:-translate-y-1"
       >
         <a class="flex items-center" target="_blank" :href="item2.url">
           <img :src="item2.image" class="w-10 pr-1" alt="" />
@@ -69,15 +79,19 @@
         </a>
       </div>
     </div>
-    <h1 v-if="activeTab === 'tools'" class="mt-4">Tools</h1>
+    <h1 v-if="activeTab === 'tools'" class="mt-4" data-aos="fade-left" data-aos-duration="1500">
+      Tools
+    </h1>
     <div
       v-if="activeTab === 'tools'"
-      class="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-2 md:grid-cols-3"
+      class="grid grid-cols-2 gap-4 mt-2 md:grid-cols-3"
+      data-aos="fade-right"
+      data-aos-duration="1500"
     >
       <div
         v-for="(item2, index) in skill.tools"
         :key="index"
-        class="flex items-center px-2 border rounded-md border-[#7f7f7f] h-14"
+        class="flex items-center px-2 border rounded-md hover:bg-[#7f7f7f64] border-[#7f7f7f] h-14"
       >
         <a class="flex items-center" target="_blank" :href="item2.url">
           <img :src="item2.image" class="w-10 pr-1" alt="" />
@@ -115,7 +129,6 @@ const fetchEducationData = async () => {
     const response = await fetch('src/assets/data/skills.json')
     const data = await response.json()
     skill.value = data.skills
-    console.log(skill)
   } catch (error) {
     console.error('Error fetching education data:', error)
   }
