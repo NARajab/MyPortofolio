@@ -1,16 +1,19 @@
 // src/composables/useDarkMode.ts
 import { computed } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
+import type { ComputedRef } from 'vue'
+import { useDark } from '@vueuse/core'
 
 interface UseDarkModeReturn {
   isDarkMode: ReturnType<typeof useDark>
-  toggleDarkMode: ReturnType<typeof useToggle>
-  containerClass: ReturnType<typeof computed>
+  toggleDarkMode: () => void
+  containerClass: ComputedRef<Record<string, boolean | string>>
 }
 
 export function useDarkMode(): UseDarkModeReturn {
   const isDarkMode = useDark()
-  const toggleDarkMode = useToggle(isDarkMode)
+  const toggleDarkMode = () => {
+    isDarkMode.value = !isDarkMode.value
+  }
 
   const containerClass = computed(() => ({
     'font-family': 'Poppins',

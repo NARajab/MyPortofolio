@@ -1,7 +1,7 @@
 <template>
   <!-- Contact Bar -->
   <div
-    class="fixed z-50 flex flex-col items-center gap-4 top-2/3 right-8"
+    class="fixed z-50 flex flex-col items-center gap-4 top-64 left-24"
     data-aos="fade-left"
     data-aos-duration="1000"
   >
