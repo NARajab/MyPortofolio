@@ -44,15 +44,15 @@ import { useDarkMode } from '../composables/useDarkMode'
 import { Github } from 'lucide-vue-next'
 
 const projects = ref([])
-import Line1 from '../assets/images/Line.png'
-import Line2 from '../assets/images/Line2.png'
+import Line1 from '../../public/images/Line.png'
+import Line2 from '../../public/images/Line2.png'
 
 const { isDarkMode } = useDarkMode()
 const line = computed(() => (isDarkMode.value ? Line1 : Line2))
 
 onMounted(async () => {
   try {
-    const response = await fetch('src/assets/data/projects.json')
+    const response = await fetch('../../public/data/projects.json')
     projects.value = await response.json()
   } catch (error) {
     console.error('Gagal memuat projects.json:', error)

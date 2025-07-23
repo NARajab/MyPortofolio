@@ -33,7 +33,7 @@ const icons = { Mail, Phone, Linkedin, Instagram }
 const contacts = ref([])
 
 onMounted(async () => {
-  const res = await fetch('src/assets/data/contacts.json')
+  const res = await fetch('public/data/contacts.json')
   contacts.value = await res.json()
 })
 </script>

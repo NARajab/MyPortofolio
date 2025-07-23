@@ -14,7 +14,7 @@
     <div class="flex justify-center">
       <img
         class="w-1/2 rounded-full md:w-full"
-        src="../assets/images/Ellipse 1.png"
+        src="../../public/images/Ellipse 1.png"
         alt="my-foto"
       />
     </div>

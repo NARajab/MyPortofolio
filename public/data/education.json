@@ -7,17 +7,17 @@
         {
           "name": "Python",
           "url": "https://www.python.org/",
-          "image": "src/assets/images/Python.png"
+          "image": "/images/Python.png"
         },
         {
           "name": "Java",
           "url": "https://www.java.com/",
-          "image": "src/assets/images/Java.png"
+          "image": "/images/Java.png"
         },
         {
           "name": "MySQL",
           "url": "https://www.mysql.com/",
-          "image": "src/assets/images/MySQl.png"
+          "image": "/images/MySQl.png"
         }
       ]
     },
@@ -28,22 +28,22 @@
         {
           "name": "JavaScript",
           "url": "https://www.python.org/",
-          "image": "src/assets/images/JavaScript.png"
+          "image": "/images/JavaScript.png"
         },
         {
           "name": "PostgreSQL",
           "url": "https://www.python.org/",
-          "image": "src/assets/images/Postgre.png"
+          "image": "/images/Postgre.png"
         },
         {
           "name": "Node.js",
           "url": "https://www.python.org/",
-          "image": "src/assets/images/nodejs.png"
+          "image": "/images/nodejs.png"
         },
         {
           "name": "React",
           "url": "https://www.python.org/",
-          "image": "src/assets/images/React.png"
+          "image": "/images/React.png"
         }
       ]
     }

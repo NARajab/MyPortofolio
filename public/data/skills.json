@@ -5,64 +5,64 @@
         {
           "name": "JavaScript",
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-          "image": "src/assets/images/JavaScript.png"
+          "image": "/images/JavaScript.png"
         },
         {
           "name": "MySQL",
           "url": "https://www.mysql.com/",
-          "image": "src/assets/images/MySQL.png"
+          "image": "/images/MySQL.png"
         },
         {
           "name": "PostgreSQL",
           "url": "https://www.postgresql.org/",
-          "image": "src/assets/images/Postgre.png"
+          "image": "/images/Postgre.png"
         },
         {
           "name": "Node.js",
           "url": "https://nodejs.org/",
-          "image": "src/assets/images/Nodejs.png"
+          "image": "/images/Nodejs.png"
         },
         {
           "name": "React",
           "url": "https://reactjs.org/",
-          "image": "src/assets/images/React.png"
+          "image": "/images/React.png"
         },
         {
           "name": "Tailwind CSS",
           "url": "https://tailwindcss.com/",
-          "image": "src/assets/images/tailwind.png"
+          "image": "/images/tailwind.png"
         }
       ],
       "hadContact": [
         {
           "name": "Python",
           "url": "https://www.python.org/",
-          "image": "src/assets/images/Python.png"
+          "image": "/images/Python.png"
         },
         {
           "name": "Flutter",
           "url": "https://flutter.dev/",
-          "image": "src/assets/images/flutter.png"
+          "image": "/images/flutter.png"
         },
         {
           "name": "Laravel",
           "url": "https://laravel.com/",
-          "image": "src/assets/images/Laravel.png"
+          "image": "/images/Laravel.png"
         },
         {
           "name": "VueJs",
           "url": "https://vuejs.org/",
-          "image": "src/assets/images/Vue.png"
+          "image": "/images/Vue.png"
         },
         {
           "name": "TypeScript",
           "url": "https://www.typescriptlang.org/",
-          "image": "src/assets/images/Typescript.png"
+          "image": "/images/Typescript.png"
         },
         {
           "name": "Bootstrap",
           "url": "https://getbootstrap.com/",
-          "image": "src/assets/images/Bootsrap.png"
+          "image": "/images/Bootsrap.png"
         }
       ]
     },
@@ -70,27 +70,27 @@
       {
         "name": "Git",
         "url": "https://git-scm.com/",
-        "image": "src/assets/images/Git.png"
+        "image": "/images/Git.png"
       },
       {
         "name": "Visual Studio Code",
         "url": "https://code.visualstudio.com/",
-        "image": "src/assets/images/VSCode.png"
+        "image": "/images/VSCode.png"
       },
       {
         "name": "pgAdmin",
         "url": "https://www.pgadmin.org/",
-        "image": "src/assets/images/pgAdmin.png"
+        "image": "/images/pgAdmin.png"
       },
       {
         "name": "Laragon",
         "url": "https://laragon.org/",
-        "image": "src/assets/images/Laragon.png"
+        "image": "/images/Laragon.png"
       },
       {
         "name": "Github",
         "url": "https://github.com/",
-        "image": "src/assets/images/Github-dark.png"
+        "image": "/images/Github-dark.png"
       }
     ]
   }
