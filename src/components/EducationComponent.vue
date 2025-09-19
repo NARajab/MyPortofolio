@@ -23,7 +23,7 @@
         </p>
       </div>
       <div class="flex flex-row items-center gap-3 mt-3">
-        <div class="flex flex-col gap-3 md:flex-row">
+        <div class="flex flex-wrap justify-center gap-3">
           <div
             v-for="(skill, skillIndex) in item.skills"
             :key="skillIndex"
